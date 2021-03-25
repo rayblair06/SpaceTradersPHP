@@ -1,9 +1,7 @@
 {
     "name": "rayblair/spacetradersphp",
-    "description": "SpacetradersPHP",
-    "keywords": [
-        "rayblair",
-        "SpacetradersPHP"
+    "description": "An API Wrapper for spacetraders.io written in PHP",
+    "keywords": [ "spacetraders", "space traders", "SpacetradersPHP", "SpacetradersPHP", "rayblair", "Ray Blair"
     ],
     "homepage": "https://github.com/rayblair/spacetradersphp",
     "license": "MIT",

@@ -14,79 +14,105 @@ You can install the package via composer:
 composer require rayblair/spacetradersphp
 ```
 
+## Example
+
+```php
+    // Include composer autoload, if required
+    require __DIR__ . 'vendor/autoload.php';
+
+    // Import the SpaceTradersPHP class
+    use RayBlair\SpaceTradersPHP\SpaceTradersPHP;
+
+    // Initial a client instance
+    $client = new SpaceTradersPHP('token', 'username');
+
+    // Will return the game status
+    echo $client->game->status()->status;
+
+    // kill php script
+    die();
+```
+
 ## Usage
 
 ```php
+    // Include composer autoload, if required
+    require 'vendor/autoload.php';
+
+    // Import the SpaceTradersPHP class
+    use RayBlair\SpaceTradersPHP\SpaceTradersPHP;
+
+    // Initial a client instance
     $client = new SpaceTradersPHP('token', 'username');
 
     // Get Game Status
-    return $client->game->status();
+    $client->game->status();
 
     // Create User Token
-    return $client->users->token('username');
+    $client->users->token('username');
 
     // Show User
-    return $client->users->get('username');
+    $client->users->get('username');
 
     // Get All Active Flight Plans
-    return $client->flightPlans->all('OE');
+    $client->flightPlans->all('OE');
 
     // Get existing Flight Plan
-    return $client->flightPlans->get('username', 'flight_plan_id');
+    $client->flightPlans->get('username', 'flight_plan_id');
 
     // Create Flight Plan
-    return $client->flightPlans->create('username', 'ship_id', 'destination');
+    $client->flightPlans->create('username', 'ship_id', 'destination');
 
     // Get available loans
-    return $client->loans->all();
+    $client->loans->all();
 
     // Get loans
-    return $client->loans->get('username');
+    $client->loans->get('username');
 
     // Takeout loan
-    return $client->loans->takeout('username', 'STARTUP');
+    $client->loans->takeout('username', 'STARTUP');
 
     // Payoff loan
-    return $client->loans->payoff('username', 'loan_id');
+    $client->loans->payoff('username', 'loan_id');
 
     // Get Location
-    return $client->locations->get('OE-UC');
+    $client->locations->get('OE-UC');
 
     // Get Ships at Location
-    return $client->locations->ships('OE-UC');
+    $client->locations->ships('OE-UC');
 
     // Get Locations in System
-    return $client->systems->all();
+    $client->systems->all();
 
     // Get Locations in System
-    return $client->systems->get('OE');
+    $client->systems->get('OE');
 
     // Get Marketplace in Location
-    return $client->locations->marketplace('OE-UC');
+    $client->locations->marketplace('OE-UC');
 
     // Purchase Order
-    return $client->orders->purchase('username', 'ship_id', 'FUEL', 20);
+    $client->orders->purchase('username', 'ship_id', 'FUEL', 20);
 
     // Sell Order
-    return $client->orders->sell('username', 'ship_id', 'FUEL', 20);
+    $client->orders->sell('username', 'ship_id', 'FUEL', 20);
 
     // Show All Ships
-    return $client->ships->all();
+    $client->ships->all();
 
     // Show Player's Ships
-    return $client->ships->get();
+    $client->ships->get();
 
     // Get Ship by ID
-    return $client->ships->get('ship_id');
+    $client->ships->get('ship_id');
 
     // Purchase Ship
-    return $client->ships->purchase('username', 'OE-PM-TR', 'JW-MK-I');
+    $client->ships->purchase('username', 'OE-PM-TR', 'JW-MK-I');
 
     // Jettison Ship's Cargo
-    return $client->ships->jettison('username', 'ship_id', 'FUEL', 20);
+    $client->ships->jettison('username', 'ship_id', 'FUEL', 20);
 
     // Scrap Ship
-    return $client->ships->scrap('username', 'ship_id');
+    $client->ships->scrap('username', 'ship_id');
 ```
 
 ## Testing
