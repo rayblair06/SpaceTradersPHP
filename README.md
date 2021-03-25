@@ -18,7 +18,7 @@ composer require rayblair/spacetradersphp
 
 ```php
     // Include composer autoload, if required
-    require __DIR__ . 'vendor/autoload.php';
+    require __DIR__ . '/vendor/autoload.php';
 
     // Import the SpaceTradersPHP class
     use RayBlair\SpaceTradersPHP\SpaceTradersPHP;
